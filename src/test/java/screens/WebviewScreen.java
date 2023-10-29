@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.BaseScreen;
 
+import java.util.Set;
+
 public class WebviewScreen extends BaseScreen {
 
     @FindBy(className = "hero__subtitle")

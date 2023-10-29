@@ -7,9 +7,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import screens.BottomNavigationScreen;
+import screens.WebviewScreen;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Set;
 
 public class BaseTest {
 
@@ -45,6 +47,20 @@ public class BaseTest {
 
     public BottomNavigationScreen loadNavigationScreen() {
         return new BottomNavigationScreen(driver);
+    }
+
+    public WebviewScreen loadWebviewScreen() {
+        return new WebviewScreen(driver);
+    }
+
+    public void changeToWebviewContext() {
+        Set<String> contextNames = driver.getContextHandles();
+
+        driver.context((String) contextNames.toArray()[1]);
+    }
+
+    public void changeToAppContext() {
+        driver.context("NATIVE_APP");
     }
 
     @AfterTest

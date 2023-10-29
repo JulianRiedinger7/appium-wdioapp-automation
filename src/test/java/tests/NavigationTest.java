@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import screens.*;
 import utils.BaseTest;
@@ -45,5 +46,20 @@ public class NavigationTest extends BaseTest {
         DragScreen drag = bottomNavigation.goToDrag();
 
         Assert.assertTrue(drag.isDragTitleCorrect("Drag and Drop"), "The titles does not match");
+    }
+
+    @Test
+    @Ignore
+    public void WebviewNavigationTest() {
+        bottomNavigation.goToWebview();
+
+        changeToWebviewContext();
+
+        WebviewScreen webview = loadWebviewScreen();
+
+        Assert.assertTrue(webview.isWebviewTitleCorrect("Next-gen browser and mobile automation test framework for Node.js"), "The titles does not match");
+        Assert.assertTrue(webview.isGetStartedBtnClickable(), "Get started button is not clickable");
+
+        changeToAppContext();
     }
 }
