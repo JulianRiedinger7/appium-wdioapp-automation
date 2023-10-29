@@ -49,4 +49,9 @@ public class BaseScreen {
         }
     }
 
+    protected boolean isTitleCorrect(AndroidElement element, String title) {
+        waitElementVisibility(element);
+        return element.isDisplayed() && element.getText().equalsIgnoreCase(title);
+    }
+
 }
