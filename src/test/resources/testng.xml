@@ -3,9 +3,15 @@
 <suite name="WDIODEMOAPP Android Automation Suite">
     <parameter name="email" value="test@gmail.com" />
     <parameter name="password" value="Newpass123" />
-    <test name="Login, Navigation and Swipe Test">
+    <test name="Signup and Login Test">
         <classes>
             <class name="tests.LoginTest" />
+        </classes>
+    </test>
+
+    <test name="Navigation Test">
+        <classes>
+            <class name="tests.NavigationTest" />
         </classes>
     </test>
 </suite>

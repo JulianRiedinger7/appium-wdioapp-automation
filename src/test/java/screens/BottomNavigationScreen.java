@@ -33,4 +33,29 @@ public class BottomNavigationScreen extends BaseScreen {
         tapByElement(loginBtn);
         return new LoginScreen(driver);
     }
+
+    public HomeScreen goToHome() {
+        tapByElement(homeBtn);
+        return new HomeScreen(driver);
+    }
+
+    public WebviewScreen goToWebview() {
+        tapByElement(webviewBtn);
+        return new WebviewScreen(driver);
+    }
+
+    public FormsScreen goToForms() {
+        tapByElement(formsBtn);
+        return new FormsScreen(driver);
+    }
+
+    public SwipeScreen goToSwipe() {
+        tapByElement(swipeBtn);
+        return new SwipeScreen(driver);
+    }
+
+    public DragScreen goToDrag() {
+        tapByElement(dragBtn);
+        return new DragScreen(driver);
+    }
 }
