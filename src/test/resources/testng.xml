@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="WDIODEMOAPP Android Automation Suite">
+    <parameter name="email" value="test@gmail.com" />
+    <parameter name="password" value="Newpass123" />
+    <test name="Login, Navigation and Swipe Test">
+        <classes>
+            <class name="tests.LoginTest" />
+        </classes>
+    </test>
+</suite>
